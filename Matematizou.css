@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --neon: #00ffff;
+  --neon-shadow: 0 0 10px var(--neon), 0 0 20px var(--neon);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  background: radial-gradient(circle at center, #222 0%, #000 70%);
+  font-family: 'Press Start 2P', monospace;
+  color: #fff;
+}
+
+#p5-holder {
+  border: 4px solid var(--neon);
+  box-shadow: var(--neon-shadow);
+}
+
+.panel {
+  width: 260px;
+  background: #101010cc;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000 inset, var(--neon-shadow);
+}
+
+h3 {
+  font-size: 14px;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+select,
+input {
+  flex: 1;
+  background: #000;
+  color: #0f0;
+  border: 1px solid var(--neon);
+  padding: 2px 4px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background: var(--neon);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: var(--neon-shadow);
+  transition: transform .1s;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+button:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#score {
+  font-size: 14px;
+  text-align: center;
+}
