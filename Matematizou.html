@@ -1,0 +1,54 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Jogo da Normal – Pinball 2000</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+  <!-- p5.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+<body>
+  <!-- Canvas -->
+  <div id="p5-holder"></div>
+
+  <!-- Painel de configuração -->
+  <div id="setup" class="panel">
+    <h3>Distribua até 100 bolinhas<br>(máx. 3 colunas)</h3>
+
+    <!-- Entrada 1 -->
+    <div class="entry">
+      Coluna:
+      <select class="colSel"></select>
+      Nº:
+      <input type="number" class="qtyInp" min="0" max="100" value="0">
+    </div>
+    <!-- Entrada 2 -->
+    <div class="entry">
+      Coluna:
+      <select class="colSel"></select>
+      Nº:
+      <input type="number" class="qtyInp" min="0" max="100" value="0">
+    </div>
+    <!-- Entrada 3 -->
+    <div class="entry">
+      Coluna:
+      <select class="colSel"></select>
+      Nº:
+      <input type="number" class="qtyInp" min="0" max="100" value="0">
+    </div>
+
+    <p id="remaining">Restantes: 100</p>
+    <button id="startBtn" disabled>Começar</button>
+  </div>
+
+  <!-- Placar -->
+  <div id="score" class="panel" style="display:none">
+    <div>Score: <span id="scoreValue">0</span></div>
+    <button id="resetBtn" style="display:none; margin-top:10px;">Jogar de novo</button>
+  </div>
+
+  <!-- Lógica do jogo -->
+  <script src="sketch.js"></script>
+</body>
+</html>
